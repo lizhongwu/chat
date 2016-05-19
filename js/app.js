@@ -18,7 +18,7 @@ angular.module('mod').controller('ctrl', function ($scope, $firebaseArray) {
     //头像
     //$scope.head = $scope.sex === "1" ? "img/boy-head.jpg?"+Math.random() : "img/girl-head.jpg?"+Math.random();
     $scope.head = localStorage.getItem("head");
-    $scope.head = $scope.head === null ? "img/h1.jpg?" + Math.random() : $scope.head + "?" + Math.random();
+    $scope.head = $scope.head === null ? "img/null.jpg?" + Math.random() : $scope.head + "?" + Math.random();
 
     //发送消息
     $scope.send = function () {
