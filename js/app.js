@@ -9,7 +9,6 @@ angular.module('mod').controller('ctrl', function ($scope, $firebaseArray) {
     //初始化
     //昵称
     $scope.nikeName = localStorage.getItem("nikeName");
-    console.log($scope.nikeName);
     $scope.nikeName = $scope.nikeName === null ? "游客" + Math.floor(Math.random() * 100000) : $scope.nikeName;
     //性别
     $scope.sex = localStorage.getItem("sex");
@@ -22,6 +21,8 @@ angular.module('mod').controller('ctrl', function ($scope, $firebaseArray) {
 
     //发送消息
     $scope.send = function () {
+        console.log($scope.message)
+
         $scope.content = {
             "name": $scope.nikeName,
             "time": $scope.getTime(),
@@ -36,7 +37,7 @@ angular.module('mod').controller('ctrl', function ($scope, $firebaseArray) {
 
     //Enter发送
     $scope.enterSend = function ($event) {
-        if ($event.keyCode === 13) {
+        if ($event.keyCode === 13 && !$scope.sendForm.$invalid) {
             $scope.send();
         }
     };
