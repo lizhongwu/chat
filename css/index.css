@@ -1,0 +1,28 @@
+div.panel-container {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    cursor: default;
+}
+div.content {
+    padding: 10px 5px;
+}
+div.content p.name {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 5px;
+    font-size: 8px;
+    color: #898989;
+    font-family: 微软雅黑
+}
+div.content span.message {
+    vertical-align: bottom;
+    padding: 10px;
+    background-color: #337ab7;
+    color: #fff;
+    border-radius:5px;
+}
